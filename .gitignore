@@ -1,0 +1,9 @@
+/solution/WellFired.Direct.Editor/bin/
+/solution/WellFired.Direct.Editor/obj/
+/solution/WellFired.Direct.Runtime/bin/
+/solution/WellFired.Direct.Runtime/obj/
+/solution/WellFired.Shared.Editor/obj/
+/solution/WellFired.Shared.Editor/bin/
+/solution/WellFired.Shared.Runtime/bin/
+/solution/WellFired.Shared.Runtime/obj/
+*.DS_Store

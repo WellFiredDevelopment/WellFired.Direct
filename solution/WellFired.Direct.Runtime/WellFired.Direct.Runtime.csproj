@@ -1,0 +1,123 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{A908DFE5-7421-45A1-AEE7-C25591FC5A4B}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>WellFired.Direct.Runtime</RootNamespace>
+    <AssemblyName>WellFired.Direct.Runtime</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>../../unity/Assets/WellFired/WellFired.Direct/Code/</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>../../unity/Assets/WellFired/WellFired.Direct/Code/</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="UnityEngine, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
+      <HintPath>..\Assemblies\UnityEngine.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.UI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null">
+      <HintPath>..\Assemblies\UnityEngine.UI.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Animation\AnimationClipData.cs" />
+    <Compile Include="Animation\AnimationTimelineController.cs" />
+    <Compile Include="Animation\AnimationTrack.cs" />
+    <Compile Include="Curve\CurveAutoTangentModes.cs" />
+    <Compile Include="Curve\USInternalCurve.cs" />
+    <Compile Include="Curve\USInternalKeyframe.cs" />
+    <Compile Include="Event\USEventBase.cs" />
+    <Compile Include="Event\USUILayer.cs" />
+    <Compile Include="Event\USUIPosition.cs" />
+    <Compile Include="Extensions\TransformExtensions.cs" />
+    <Compile Include="Observer\USObserverKeyframe.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Property\USPropertyInfo.cs" />
+    <Compile Include="Recording\USRecord.cs" />
+    <Compile Include="Recording\USRecordPresetInfo.cs" />
+    <Compile Include="Recording\USRecordRuntimePreferences.cs" />
+    <Compile Include="Sequencer\USRecordSequence.cs" />
+    <Compile Include="Sequencer\USSequencer.cs" />
+    <Compile Include="Spline\LerpedQuaternion.cs" />
+    <Compile Include="Spline\Solvers\AbstractSplineSolver.cs" />
+    <Compile Include="Spline\Solvers\CatmullRomSplineSolver.cs" />
+    <Compile Include="Spline\Solvers\CubicBezierSplineSolver.cs" />
+    <Compile Include="Spline\Solvers\LinearSplineSolver.cs" />
+    <Compile Include="Spline\Solvers\QuadraticSplineSolver.cs" />
+    <Compile Include="Spline\Spline.cs" />
+    <Compile Include="Spline\SplineKeyframe.cs" />
+    <Compile Include="Spline\SplineOrientationMode.cs" />
+    <Compile Include="Spline\SplineType.cs" />
+    <Compile Include="Timeline\USTimelineAnimation.cs" />
+    <Compile Include="Timeline\USTimelineAnimationEditorRunner.cs" />
+    <Compile Include="Timeline\USTimelineAnimationGameRunner.cs" />
+    <Compile Include="Timeline\USTimelineBase.cs" />
+    <Compile Include="Timeline\USTimelineContainer.cs" />
+    <Compile Include="Timeline\USTimelineEvent.cs" />
+    <Compile Include="Timeline\USTimelineObjectPath.cs" />
+    <Compile Include="Timeline\USTimelineObserver.cs" />
+    <Compile Include="Timeline\USTimelineProperty.cs" />
+    <Compile Include="UnityUI\PauseSequenceButton.cs" />
+    <Compile Include="UnityUI\PlayPauseSequenceToggleButton.cs" />
+    <Compile Include="UnityUI\PlaySequenceButton.cs" />
+    <Compile Include="UnityUI\ReplaySequenceButton.cs" />
+    <Compile Include="UnityUI\SequencePreviewer.cs" />
+    <Compile Include="UnityUI\SkipSequenceButton.cs" />
+    <Compile Include="UnityUI\StopSequenceButton.cs" />
+    <Compile Include="Utility\USGameObjectUtils.cs" />
+    <Compile Include="Utility\USRuntimeUtility.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Animation\.DS_Store" />
+    <Content Include="Curve\.DS_Store" />
+    <Content Include="Event\.DS_Store" />
+    <Content Include="Extensions\.DS_Store" />
+    <Content Include="Observer\.DS_Store" />
+    <Content Include="Property\.DS_Store" />
+    <Content Include="Recording\.DS_Store" />
+    <Content Include="Sequencer\.DS_Store" />
+    <Content Include="Spline\.DS_Store" />
+    <Content Include="Spline\Solvers\.DS_Store" />
+    <Content Include="Timeline\.DS_Store" />
+    <Content Include="UnityUI\.DS_Store" />
+    <Content Include="Utility\.DS_Store" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\WellFired.Shared.Runtime\WellFired.Shared.Runtime.csproj">
+      <Project>{01ad6096-1c90-4da9-b429-fd4de0945d6e}</Project>
+      <Name>WellFired.Shared.Runtime</Name>
+      <Private>False</Private>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+         Other similar extension points exist, see Microsoft.Common.targets.
+    <Target Name="BeforeBuild">
+    </Target>
+    <Target Name="AfterBuild">
+    </Target>
+    -->
+</Project>

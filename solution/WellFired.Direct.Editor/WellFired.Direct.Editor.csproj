@@ -1,0 +1,162 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{3F128049-9343-4A29-A7DF-EDDB93FDCCEA}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>WellFired.Direct.Editor</RootNamespace>
+    <AssemblyName>WellFired.Direct.Editor</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>../../unity/Assets/WellFired/WellFired.Direct/Code/Editor/</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>../../unity/Assets/WellFired/WellFired.Direct/Code/Editor/</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="UnityEditor, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
+      <HintPath>../Assemblies/UnityEditor.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
+      <HintPath>..\Assemblies\UnityEngine.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.UI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null">
+      <HintPath>..\Assemblies\UnityEngine.UI.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Events\USEventBaseEditor.cs" />
+    <Compile Include="Inspectors\AnimationClipDataInspector.cs" />
+    <Compile Include="Inspectors\SplineKeyframeInspector.cs" />
+    <Compile Include="Inspectors\USObserverKeyframeInspector.cs" />
+    <Compile Include="Inspectors\USPropertyKeyframeInspector.cs" />
+    <Compile Include="Inspectors\USSequencerInspector.cs" />
+    <Compile Include="Inspectors\USTimelineObjectPathInspector.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SequencerEditor\HierarchyEditors\AnimationEditor\AnimationClipRenderData.cs" />
+    <Compile Include="SequencerEditor\HierarchyEditors\AnimationEditor\AnimationEditor.cs" />
+    <Compile Include="SequencerEditor\HierarchyEditors\AnimationEditor\AnimationEditorISelectable.cs" />
+    <Compile Include="SequencerEditor\HierarchyEditors\CurveEditor\AnimationCurveEditor.cs" />
+    <Compile Include="SequencerEditor\HierarchyEditors\CurveEditor\AnimationCurveEditorContext.cs" />
+    <Compile Include="SequencerEditor\HierarchyEditors\CurveEditor\AnimationCurveEditorGUIUtility.cs" />
+    <Compile Include="SequencerEditor\HierarchyEditors\CurveEditor\AnimationCurveEditorISelectable.cs" />
+    <Compile Include="SequencerEditor\HierarchyEditors\CurveEditor\AnimationCurveEditorUtility.cs" />
+    <Compile Include="SequencerEditor\HierarchyEditors\CurveEditor\AnimationKeyframeRenderData.cs" />
+    <Compile Include="SequencerEditor\HierarchyEditors\EventEditor\EventEditor.cs" />
+    <Compile Include="SequencerEditor\HierarchyEditors\EventEditor\EventEditorISelectable.cs" />
+    <Compile Include="SequencerEditor\HierarchyEditors\EventEditor\EventRenderData.cs" />
+    <Compile Include="SequencerEditor\HierarchyEditors\ISelectableContainer.cs" />
+    <Compile Include="SequencerEditor\HierarchyEditors\ObjectPathEditor\ObjectPathEditor.cs" />
+    <Compile Include="SequencerEditor\HierarchyEditors\ObjectPathEditor\ObjectPathEditorISelectable.cs" />
+    <Compile Include="SequencerEditor\HierarchyEditors\ObjectPathEditor\ObjectPathRenderData.cs" />
+    <Compile Include="SequencerEditor\HierarchyEditors\ObserverEditor\ObserverEditor.cs" />
+    <Compile Include="SequencerEditor\HierarchyEditors\ObserverEditor\ObserverEditorISelectable.cs" />
+    <Compile Include="SequencerEditor\HierarchyEditors\ObserverEditor\ObserverRenderData.cs" />
+    <Compile Include="SequencerEditor\Hierarchy\IUSHierarchyItem.cs" />
+    <Compile Include="SequencerEditor\Hierarchy\IUSTimelineHierarchyItem.cs" />
+    <Compile Include="SequencerEditor\Hierarchy\USAnimationTimelineHierarchyItem.cs" />
+    <Compile Include="SequencerEditor\Hierarchy\USAnimationTimelineTrackHierarchyItem.cs" />
+    <Compile Include="SequencerEditor\Hierarchy\USComponentHierarchyItem.cs" />
+    <Compile Include="SequencerEditor\Hierarchy\USEventTimelineHierarchyItem.cs" />
+    <Compile Include="SequencerEditor\Hierarchy\USHierarchy.cs" />
+    <Compile Include="SequencerEditor\Hierarchy\USObjectPathTimelineHierarchyItem.cs" />
+    <Compile Include="SequencerEditor\Hierarchy\USObserverTimelineHierarchyItem.cs" />
+    <Compile Include="SequencerEditor\Hierarchy\USPropertyHierarchyItem.cs" />
+    <Compile Include="SequencerEditor\Hierarchy\USPropertyMemberHierarchyItem.cs" />
+    <Compile Include="SequencerEditor\Hierarchy\USPropertyTimelineHierarchyItem.cs" />
+    <Compile Include="SequencerEditor\Hierarchy\USTimelineContainerHierarchyItem.cs" />
+    <Compile Include="SequencerEditor\Hierarchy\Utility\USEditor.cs" />
+    <Compile Include="SequencerEditor\Hierarchy\Utility\USPropertyMemberUtility.cs" />
+    <Compile Include="SequencerEditor\PropertyBoxPopup\ComponentHierarchyItem.cs" />
+    <Compile Include="SequencerEditor\PropertyBoxPopup\FavouriteHierarchyItem.cs" />
+    <Compile Include="SequencerEditor\PropertyBoxPopup\LabelHierarchyItem.cs" />
+    <Compile Include="SequencerEditor\PropertyBoxPopup\PropertyBox.cs" />
+    <Compile Include="SequencerEditor\PropertyBoxPopup\PropertyBoxHierarchyItem.cs" />
+    <Compile Include="SequencerEditor\PropertyBoxPopup\PropertyBoxPopup.cs" />
+    <Compile Include="SequencerEditor\PropertyBoxPopup\PropertyHierarchyItem.cs" />
+    <Compile Include="SequencerEditor\PropertyBoxPopup\SuggestionHierarchyItem.cs" />
+    <Compile Include="SequencerEditor\PropertyFieldInfo\PropertyFieldInfo.cs" />
+    <Compile Include="SequencerEditor\PropertyFieldInfo\PropertyFieldInfoUtility.cs" />
+    <Compile Include="SequencerWindow\AnimationHelper.cs" />
+    <Compile Include="SequencerWindow\USContent.cs" />
+    <Compile Include="SequencerWindow\USCustomTimelineHierarchyItemAttribute.cs" />
+    <Compile Include="SequencerWindow\USScrollInfo.cs" />
+    <Compile Include="SequencerWindow\USTimelineMarkerCachedData.cs" />
+    <Compile Include="SequencerWindow\USWindow.cs" />
+    <Compile Include="SequencerWindow\USZoomInfo.cs" />
+    <Compile Include="SequencerWindow\Utility\USEditorUtility.cs" />
+    <Compile Include="Utility\MecanimAnimationUtility.cs" />
+    <Compile Include="Utility\USAssetModificationProcessor.cs" />
+    <Compile Include="Utility\USDetachScriptableObjects.cs" />
+    <Compile Include="Utility\USUndoManager.cs" />
+    <Compile Include="Utility\USUpgradePaths.cs" />
+    <Compile Include="Windows\USPreferenceWindow.cs" />
+    <Compile Include="Windows\USRecordPreferencesWindow.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Events\.DS_Store" />
+    <Content Include="Inspectors\.DS_Store" />
+    <Content Include="SequencerEditor\.DS_Store" />
+    <Content Include="SequencerEditor\HierarchyEditors\.DS_Store" />
+    <Content Include="SequencerEditor\HierarchyEditors\AnimationEditor\.DS_Store" />
+    <Content Include="SequencerEditor\HierarchyEditors\CurveEditor\.DS_Store" />
+    <Content Include="SequencerEditor\HierarchyEditors\EventEditor\.DS_Store" />
+    <Content Include="SequencerEditor\HierarchyEditors\ObjectPathEditor\.DS_Store" />
+    <Content Include="SequencerEditor\HierarchyEditors\ObserverEditor\.DS_Store" />
+    <Content Include="SequencerEditor\Hierarchy\.DS_Store" />
+    <Content Include="SequencerEditor\Hierarchy\Utility\.DS_Store" />
+    <Content Include="SequencerEditor\PropertyBoxPopup\.DS_Store" />
+    <Content Include="SequencerEditor\PropertyFieldInfo\.DS_Store" />
+    <Content Include="SequencerWindow\.DS_Store" />
+    <Content Include="SequencerWindow\Utility\.DS_Store" />
+    <Content Include="Utility\.DS_Store" />
+    <Content Include="Windows\.DS_Store" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\WellFired.Direct.Runtime\WellFired.Direct.Runtime.csproj">
+      <Project>{a908dfe5-7421-45a1-aee7-c25591fc5a4b}</Project>
+      <Name>WellFired.Direct.Runtime</Name>
+      <Private>False</Private>
+    </ProjectReference>
+    <ProjectReference Include="..\WellFired.Shared.Editor\WellFired.Shared.Editor.csproj">
+      <Project>{e8aea18a-f947-497f-a43a-4e5c68c9289a}</Project>
+      <Name>WellFired.Shared.Editor</Name>
+      <Private>False</Private>
+    </ProjectReference>
+    <ProjectReference Include="..\WellFired.Shared.Runtime\WellFired.Shared.Runtime.csproj">
+      <Project>{01ad6096-1c90-4da9-b429-fd4de0945d6e}</Project>
+      <Name>WellFired.Shared.Runtime</Name>
+      <Private>False</Private>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+         Other similar extension points exist, see Microsoft.Common.targets.
+    <Target Name="BeforeBuild">
+    </Target>
+    <Target Name="AfterBuild">
+    </Target>
+    -->
+</Project>

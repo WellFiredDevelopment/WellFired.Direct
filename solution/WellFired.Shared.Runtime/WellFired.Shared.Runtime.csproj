@@ -1,0 +1,104 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{01AD6096-1C90-4DA9-B429-FD4DE0945D6E}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>WellFired.Shared.Runtime</RootNamespace>
+    <AssemblyName>WellFired.Shared.Runtime</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>../../unity/Assets/WellFired/WellFired.Direct/Code/</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>../../unity/Assets/WellFired/WellFired.Direct/Code/</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="UnityEngine, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
+      <HintPath>..\Assemblies\UnityEngine.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.UI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null">
+      <HintPath>..\Assemblies\UnityEngine.UI.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Context\ContextInitializer.cs" />
+    <Compile Include="Context\IInitializationContext.cs" />
+    <Compile Include="Data\DataBaseEntry.cs" />
+    <Compile Include="Data\DataComponent.cs" />
+    <Compile Include="Easing\DoubleEasing.cs" />
+    <Compile Include="Easing\Easing.cs" />
+    <Compile Include="Extensions\AccountExtensions.cs" />
+    <Compile Include="Extensions\ArrayExtensions.cs" />
+    <Compile Include="Extensions\ColorExtensions.cs" />
+    <Compile Include="Extensions\GizmosChangeColor.cs" />
+    <Compile Include="Extensions\GOExtensions.cs" />
+    <Compile Include="Extensions\GUIBeginArea.cs" />
+    <Compile Include="Extensions\GUIBeginHorizontal.cs" />
+    <Compile Include="Extensions\GUIBeginScrollView.cs" />
+    <Compile Include="Extensions\GUIBeginVertical.cs" />
+    <Compile Include="Extensions\GUIChangeColor.cs" />
+    <Compile Include="Extensions\GUIChangeContentColor.cs" />
+    <Compile Include="Extensions\GUIEnable.cs" />
+    <Compile Include="Extensions\LinqExtensions.cs" />
+    <Compile Include="Extensions\StringExtensions.cs" />
+    <Compile Include="Extensions\UIExtensions.cs" />
+    <Compile Include="Noise\FractalNoise.cs" />
+    <Compile Include="Noise\InterpolatedNoise.cs" />
+    <Compile Include="Noise\Perlin.cs" />
+    <Compile Include="Noise\Shake.cs" />
+    <Compile Include="Noise\ShakeType.cs" />
+    <Compile Include="PlatformSpecific\IIOHelper.cs" />
+    <Compile Include="PlatformSpecific\IReflectionHelper.cs" />
+    <Compile Include="PlatformSpecific\IUnityEditorHelper.cs" />
+    <Compile Include="PlatformSpecific\PlatformSpecificFactory.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Transitions\BaseTransition.cs" />
+    <Compile Include="Transitions\TransitionHelper.cs" />
+    <Compile Include="Transitions\TypeOfTransition.cs" />
+    <Compile Include="UI\Window\DataComponentWindow.cs" />
+    <Compile Include="UI\Window\IWindow.cs" />
+    <Compile Include="UI\Window\Window.cs" />
+    <Compile Include="UI\Window\WindowStack.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Context\.DS_Store" />
+    <Content Include="Data\.DS_Store" />
+    <Content Include="Easing\.DS_Store" />
+    <Content Include="Extensions\.DS_Store" />
+    <Content Include="Noise\.DS_Store" />
+    <Content Include="PlatformSpecific\.DS_Store" />
+    <Content Include="Transitions\.DS_Store" />
+    <Content Include="UI\.DS_Store" />
+    <Content Include="UI\Window\.DS_Store" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+         Other similar extension points exist, see Microsoft.Common.targets.
+    <Target Name="BeforeBuild">
+    </Target>
+    <Target Name="AfterBuild">
+    </Target>
+    -->
+</Project>
